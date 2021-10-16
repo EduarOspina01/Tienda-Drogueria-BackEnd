@@ -6,24 +6,32 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.sun.istack.NotNull;
+
 @Entity
 @Table (name = "detalle_ventas")
 public class Detalle_VentaModel {
 	
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	private Integer codigo_detalle_venta;
+	private Long codigo_detalle_venta;
+	@NotNull
 	private Integer cantidad_producto;
+	@NotNull
 	private Long codigo_producto;
+	@NotNull
 	private Long codigo_venta;
-	private Long valor_total;
-	private Long valor_venta;
-	private Long valoriva;
+	@NotNull
+	private double valor_total;
+	@NotNull
+	private double valor_venta;
+	@NotNull
+	private double valoriva;
 	
-	public Integer getCodigo_detalle_venta() {
+	
+	public Long getCodigo_detalle_venta() {
 		return codigo_detalle_venta;
 	}
-	public void setCodigo_detalle_venta(Integer codigo_detalle_venta) {
+	public void setCodigo_detalle_venta(Long codigo_detalle_venta) {
 		this.codigo_detalle_venta = codigo_detalle_venta;
 	}
 	public Integer getCantidad_producto() {
@@ -44,24 +52,26 @@ public class Detalle_VentaModel {
 	public void setCodigo_venta(Long codigo_venta) {
 		this.codigo_venta = codigo_venta;
 	}
-	public Long getValor_total() {
+	public double getValor_total() {
 		return valor_total;
 	}
-	public void setValor_total(Long valor_total) {
+	public void setValor_total(double valor_total) {
 		this.valor_total = valor_total;
 	}
-	public Long getValor_venta() {
+	public double getValor_venta() {
 		return valor_venta;
 	}
-	public void setValor_venta(Long valor_venta) {
+	public void setValor_venta(double valor_venta) {
 		this.valor_venta = valor_venta;
 	}
-	public Long getValoriva() {
+	public double getValoriva() {
 		return valoriva;
 	}
-	public void setValoriva(Long valoriva) {
+	public void setValoriva(double valoriva) {
 		this.valoriva = valoriva;
 	}
+	
+
 	
 	
 

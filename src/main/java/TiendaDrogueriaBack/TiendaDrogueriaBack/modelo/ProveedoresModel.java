@@ -1,5 +1,6 @@
 package TiendaDrogueriaBack.TiendaDrogueriaBack.modelo;
 
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -15,6 +16,7 @@ public class ProveedoresModel {
 		private String direccion_proveedor;
 		private String nombre_proveedor;
 		private String telefono_proveedor;
+		
 		public long getNitproveedor() {
 			return nitproveedor;
 		}

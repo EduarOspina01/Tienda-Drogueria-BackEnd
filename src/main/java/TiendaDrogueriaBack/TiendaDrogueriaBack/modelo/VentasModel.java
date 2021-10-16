@@ -1,8 +1,14 @@
 package TiendaDrogueriaBack.TiendaDrogueriaBack.modelo;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.sun.istack.NotNull;
 
 
 @Entity
@@ -10,19 +16,24 @@ import javax.persistence.Table;
 public class VentasModel {
 	
 	@Id
-	private Long codigo_cedula;
+	private Long codigo_venta;
+	@NotNull
 	private Long cedula_cliente;
+	@NotNull
 	private Long cedula_usuario;
-	private Long ivaventa;
-	private Long total_venta;
-	private Long valor_venta;
+	@NotNull
+	private double ivaventa;
+	@NotNull
+	private double total_venta;
+	@NotNull
+	private double valor_venta;
 	
 	
-	public Long getCodigo_cedula() {
-		return codigo_cedula;
+	public Long getCodigo_venta() {
+		return codigo_venta;
 	}
-	public void setCodigo_cedula(Long codigo_cedula) {
-		this.codigo_cedula = codigo_cedula;
+	public void setCodigo_venta(Long codigo_venta) {
+		this.codigo_venta = codigo_venta;
 	}
 	public Long getCedula_cliente() {
 		return cedula_cliente;
@@ -36,24 +47,25 @@ public class VentasModel {
 	public void setCedula_usuario(Long cedula_usuario) {
 		this.cedula_usuario = cedula_usuario;
 	}
-	public Long getIva_venta() {
+	public double getIvaventa() {
 		return ivaventa;
 	}
-	public void setIva_venta(Long iva_venta) {
-		this.ivaventa = iva_venta;
+	public void setIvaventa(double ivaventa) {
+		this.ivaventa = ivaventa;
 	}
-	public Long getTotal_venta() {
+	public double getTotal_venta() {
 		return total_venta;
 	}
-	public void setTotal_venta(Long total_venta) {
+	public void setTotal_venta(double total_venta) {
 		this.total_venta = total_venta;
 	}
-	public Long getValor_venta() {
+	public double getValor_venta() {
 		return valor_venta;
 	}
-	public void setValor_venta(Long valor_venta) {
+	public void setValor_venta(double valor_venta) {
 		this.valor_venta = valor_venta;
 	}
+	
 	
 	
 	
